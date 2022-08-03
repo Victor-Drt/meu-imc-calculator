@@ -7,7 +7,15 @@
     <color name="secondary_color_200">#FF03DAC5</color>
     <color name="secondary_color_700">#FF018786</color>
 
+
+    <color name="obesidade_3">#673AB7</color>
+    <color name="obesidade_2">@android:color/holo_red_dark</color>
+    <color name="obesidade_1">#FF5722</color>
+    <color name="acima_peso">#FFEB3B</color>
+    <color name="peso_normal">#8BC34A</color>
+    <color name="peso_abaixo">#4CAF50</color>
+    <color name="peso_muit_abaixo">#009688</color>
+
     <color name="black">#FF000000</color>
-    <color name="red">@android:color/holo_red_dark</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

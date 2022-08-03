@@ -1,5 +1,6 @@
 package com.victord.meuimc
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
@@ -39,8 +40,39 @@ class MainActivity : AppCompatActivity() {
         if (peso != null && altura != null) {
             val imc = peso / (altura * altura)
             binding.tvTitle.text = "%.2f".format(imc)
+            classificar(imc)
         }
+
+
     }
+
+    private fun classificar(imc: Float) {
+        var classificacao = ""
+        if (imc < 17) {
+            classificacao = "Muito abaixo do peso"
+            binding.tvClassificacao.setTextColor(resources.getColor(R.color.peso_muit_abaixo))
+        } else if (imc >= 17.0f && imc < 18.5f) {
+            classificacao = "Abaixo do peso)"
+            binding.tvClassificacao.setTextColor(resources.getColor(R.color.peso_abaixo))
+        } else if (imc >= 18.5f && imc < 25) {
+            classificacao = "Peso Normal"
+            binding.tvClassificacao.setTextColor(resources.getColor(R.color.peso_normal))
+        } else if (imc >= 25.0f && imc < 30.0f) {
+            classificacao = "Acima do peso"
+            binding.tvClassificacao.setTextColor(resources.getColor(R.color.acima_peso))
+        } else if (imc >= 30.0f && imc < 35f) {
+            classificacao = "Obesidade I"
+            binding.tvClassificacao.setTextColor(resources.getColor(R.color.obesidade_1))
+        } else if (imc >= 35.0f && imc < 40f) {
+            classificacao = "Obesidade II"
+            binding.tvClassificacao.setTextColor(resources.getColor(R.color.obesidade_2))
+        } else {
+            classificacao = "Obesidade III (mórbida)"
+            binding.tvClassificacao.setTextColor(resources.getColor(R.color.obesidade_3))
+        }
+        binding.tvClassificacao.text = classificacao
+    }
+
 
     //    region lifecycle
     /*

@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/victo/AndroidStudioProjects/meuimcapp/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/victo/AndroidStudioProjects/meuimcapp/app/src/main/res/layout/activity_main.xml" value="0.11200000000000002" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/meuimcapp/app/src/main/res/layout/activity_result.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/victo/AndroidStudioProjects/meuimcapp/app/src/main/res/layout/main_relative.xml" value="0.264" />
       </map>
@@ -18,7 +18,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.4" />
+        <option name="scale" value="0.11200000000000002" />
       </ProjectState>
     </option>
   </component>

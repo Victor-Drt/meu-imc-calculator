@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,17 +9,36 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvClassificacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
+        tools:text="classificacao" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/seu_imc_de"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="48dp"
-        android:text="My IMC"
+        tools:text="My IMC"
         android:textAllCaps="true"
         android:textSize="64sp"
         android:textColor="@color/black"
@@ -31,27 +50,33 @@
 
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintVertical_bias="0.092">
 
         <EditText
             android:id="@+id/etAltura"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:textAlignment="center"
+            android:hint="@string/insira_a_sua_altura"
             android:inputType="numberDecimal"
-            android:hint="@string/insira_a_sua_altura"/>
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/etPeso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="@string/insira_o_seu_peso"
             android:inputType="numberDecimal"
-            android:textAlignment="center"
-            android:hint="@string/insira_o_seu_peso"/>
+            android:textAlignment="center" />
 
     </LinearLayout>
 
@@ -59,7 +84,12 @@
         android:id="@+id/btCalular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/calcular_imc" />
+        android:text="@string/calcular_imc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.305" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
